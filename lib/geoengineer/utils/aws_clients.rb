@@ -75,6 +75,13 @@ class AwsClients
     )
   end
 
+  def self.ecr(provider = nil)
+    self.client_cache(
+      provider,
+      Aws::ECR::Client
+    )
+  end
+
   def self.elasticache(provider = nil)
     self.client_cache(
       provider,
