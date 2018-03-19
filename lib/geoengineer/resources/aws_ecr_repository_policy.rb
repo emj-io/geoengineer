@@ -23,7 +23,6 @@ class GeoEngineer::Resources::AwsEcrRepositoryPolicy < GeoEngineer::Resource
                 _geo_id: respository_name,
                 _terraform_id: repository_name
               }
-            }
             rescue Aws::ECR::Errors::RepositoryPolicyNotFoundException => e
               nil
             end
